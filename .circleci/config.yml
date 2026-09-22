@@ -10,6 +10,7 @@ jobs:
     steps:
       - checkout
       - run: sleep 10
+      - run: apk add bash curl
       - run: go get -v -t ./...
       - run: sleep 5
       - run: go test -v -coverprofile=coverage.txt -covermode=atomic ./...
