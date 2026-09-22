@@ -2,11 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/golang:1.25
+      - image: golang:1.25-alpine3.24
         environment:
           GO111MODULE: "on"
 
-    working_directory: /go/src/github.com/streetbyters/agente
+    working_directory: /go/src/github.com/akdilsiz/limiterphi
     steps:
       - checkout
       - run: sleep 10
